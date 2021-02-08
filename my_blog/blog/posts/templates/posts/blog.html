@@ -1,0 +1,19 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+<div class="container pb-5 mb-sm-1">
+    <!-- Categories grid-->
+    <div class="row">
+        <!-- Category-->
+        {% for blog in blogs %}
+        <div class="col-md-4 col-sm-6">
+            <div class="card border-0 mb-grid-gutter">
+                <div class="card-body border mt-n1 py-4 text-center">
+                    <h2 class="h5 mb-1">{{ blog.title }}</h2>
+                    <span class="d-block mb-3 font-size-xs text-muted">{{ blog.description }}</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
